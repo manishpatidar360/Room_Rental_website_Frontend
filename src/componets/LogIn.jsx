@@ -34,16 +34,16 @@ export default function LogIn() {
     };
   return (
     <div className='bodybox'>
-    <div className='col-4 offset-4 Login-container'>
+    <div className='p-4 Login-container'>
         <h1 className='mb-4 ' style={{fontFamily:"revert-layer"}}>Log in </h1>
          <Form method="post" action="/login" noValidate ref={formRef} onSubmit={handleSubmit} className={validated ? 'was-validated' : ''}>
-                            <div className="mb-3 col-8">
+                            <div className="mb-3 col-8 costum">
                                 <label htmlFor="username" className="form-lable">username</label>
                                 <input type="text" placeholder="Enter username" name="username" className="form-control" required />
                                 
                             </div>
                            
-                            <div className="mb-3 col-8">
+                            <div className="mb-3 col-8 costum">
                                 <label htmlFor="password" className="form-lable">password</label>
                                 <input type="password" placeholder="Enter password" name="password" className="form-control" required />
                                 

@@ -20,7 +20,7 @@ export default function Home() {
 
    
     return (
-        <div  className="content-container">            
+        <div >            
                 <div className='row row-cols-lg-3 row-cols-md-2 row-cols-sm-1'>
                 {listings ? (
                     listings.map((listing) => (

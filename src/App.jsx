@@ -11,11 +11,15 @@ export default function App() {
   return (
     <div className='app'>
        <ToastContainer />
+       <header>
       <Navbar />
-      
+      </header>
+         <main className="content-container">
         <Outlet />
-      
+       </main>
+       <footer>
       <Footer  />
+      </footer>
     </div>
   )
 }

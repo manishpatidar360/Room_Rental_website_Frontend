@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Form, useActionData, useNavigate } from 'react-router-dom'
-import './Singup.css';
+import './SingUp.css';
 
 export default function SingUp() {
     const navigate = useNavigate();

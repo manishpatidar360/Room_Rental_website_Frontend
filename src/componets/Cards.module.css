@@ -1,0 +1,25 @@
+.card {
+    border: none !important;
+    margin-bottom: 2rem !important;
+}
+.cardImgTop {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.cardBody {
+    padding: 0 !important;
+}
+.cardText {
+    font-weight: 400;
+}
+.listingLink {
+    text-decoration: none !important;
+}
+.cardImgOverlay {
+    opacity: 0;
+}
+.cardImgOverlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}

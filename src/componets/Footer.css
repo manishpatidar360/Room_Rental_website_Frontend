@@ -1,0 +1,17 @@
+.card-header{
+ font-size: 1.2rem;
+}
+.mycustum{
+    background-color: rgb(32, 30, 30) !important ;
+    color: white !important;
+    border-radius: 0% !important;
+    margin-bottom: 0px !important;
+    width: 100vw;
+}
+.card-footer.text-body-secondary {
+    color: white !important; /* Ensures text is visible */
+    font-weight: bold;
+}
+
+    
+

@@ -3,7 +3,7 @@ import React from "react";
 import {  toast } from 'react-toastify';
 
 
-const URL="http://localhost:3000";
+const URL=import.meta.env.VITE_API_URL;
 
 const getToken=()=>{
     const token= localStorage.getItem("token");

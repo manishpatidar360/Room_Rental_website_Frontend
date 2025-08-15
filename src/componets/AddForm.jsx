@@ -33,7 +33,6 @@ export default function AddForm() {
     };
 
     return (
-        <div className='content-container'>
         <div className="row ">
             <div className="col-8 offset-2 ">
                 <br />
@@ -86,7 +85,6 @@ export default function AddForm() {
                     <br /><br />
                 </Form>
             </div>
-        </div>
-        </div>
+        </div>  
     );
 }

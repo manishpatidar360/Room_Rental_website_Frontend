@@ -62,7 +62,7 @@ export default function EditDEtail() {
 
          <div className='mb-3'>
         <label htmlFor='image' className='form-lable'>Image</label>
-        <input type="text" placeholder="enter image url"value={data.image} onChange={handleData} name="image" className='form-control' />
+        <input type="file" placeholder="enter image url" onChange={handleData} name="image" className='form-control' />
         </div>
 
         <div className='row'>

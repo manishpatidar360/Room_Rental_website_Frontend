@@ -4,7 +4,6 @@
 .content-container{
     flex: 1 !important;
     margin-top: 80px !important;
-    background: white;
     display: flex !important;
     flex-direction: column !important;
     padding: var(--body-padding);

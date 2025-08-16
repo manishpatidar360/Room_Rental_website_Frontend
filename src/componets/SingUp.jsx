@@ -24,21 +24,21 @@ export default function SingUp() {
     };
   return (
     <div className='bodybox'>
-    <div className='col-4 offset-4 signup-container'>
+    <div className=' signup-container'>
         <h1 className='mb-4 ' >Sing Up </h1>
          <Form method="post" action="/singup" noValidate ref={formRef} onSubmit={handleSubmit} className={validated ? 'was-validated' : ''}>
-                            <div className="mb-3 col-8">
+                            <div className="mb-3 col-8 costum">
                                 <label htmlFor="username" className="form-lable">username</label>
                                 <input type="text" placeholder="Enter username" name="username" className="form-control" required />
                                 
                             </div>
-                            <div className="mb-3 col-8">
+                            <div className="mb-3 col-8 costum">
                                 <label htmlFor="email" className="form-lable">Email</label>
                                 <input type="email" placeholder="Enter Email" name="email" className="form-control" required />
     
                             </div>
 
-                            <div className="mb-3 col-8">
+                            <div className="mb-3 col-8 costum">
                                 <label htmlFor="password" className="form-lable">password</label>
                                 <input type="password" placeholder="Enter password" name="password" className="form-control" required />
                                 

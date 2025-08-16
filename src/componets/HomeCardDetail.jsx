@@ -51,7 +51,7 @@ export default function HomeCardDetail() {
         </div>
 
         {/* Image & Details */}
-        <div className="card col-12 col-md-6 offset-md-3" style={{ border: "none" }}>
+        <div className="card pt-2  col-12 col-md-6 offset-md-3" style={{ border: "none" }}>
           <img src={listing.image?.url} className="card-img-top show-img" alt="..." />
           <p className='mb-0'>owned By {listing.owner.username} </p>
           <div className="card-body p-2">

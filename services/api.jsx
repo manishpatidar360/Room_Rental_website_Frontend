@@ -3,7 +3,7 @@ import React from "react";
 import {  toast } from 'react-toastify';
 
 const axiosInstance=axios.create({
-   baseURL:" http://localhost:3000"
+   baseURL:process.env.VITE_API_URL
 })
 axiosInstance.interceptors.request.use(
     (config)=>{

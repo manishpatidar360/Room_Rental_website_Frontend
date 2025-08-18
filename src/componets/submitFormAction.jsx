@@ -35,3 +35,6 @@ export async function submitLogInForm({request}) {
   return {success:true, data:result};
 
 }
+ export async function submitBookingForm({request}) {
+  
+ }

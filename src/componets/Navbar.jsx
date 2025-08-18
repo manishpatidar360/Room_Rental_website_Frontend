@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="navbar-nav">
         <Link className="nav-link " aria-current="page" to="/">Home</Link>
         <Link className="nav-link" to="/addForm">Add new Listing</Link>
-        <Link className="nav-link" to="/">All Listing</Link>
+        <Link className="nav-link" to="/dashboard">Dashboard</Link>
       </div>
       <div className="navbar-nav ms-auto">
         { token===""?( <>

@@ -7,13 +7,14 @@ import Home from './componets/Home.jsx'
 import { requestData } from '../services/api.jsx'
 import HomeCardDetail from './componets/HomeCardDetail.jsx'
 import AddForm from './componets/AddForm.jsx'
-import { submitEditFom, submitFormAction, submitLogInForm, submitSingUpForm } from './componets/submitFormAction.jsx'
+import {submitEditFom, submitFormAction, submitLogInForm, submitSingUpForm } from './componets/submitFormAction.jsx'
 import EditDEtail from './componets/EditDEtail.jsx'
 import "bootstrap/dist/css/bootstrap.min.css"; 
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { MyProvider } from './contexts/MyProvider.jsx'
 import SingUp from './componets/SingUp.jsx'
 import LogIn from './componets/LogIn.jsx'
+import Dashboard from './componets/Dashboard.jsx'
 
 const router=createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router=createBrowserRouter([
         path:"/login",
         element:<LogIn/>,
         action:submitLogInForm
+      },
+      {
+        path:"/dashboard",
+        element:<Dashboard/>
       }
     ]
 

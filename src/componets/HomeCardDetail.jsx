@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { deleteCard, requestHomeCardDetail, reviewDelete } from '../../services/api';
+import { backendVarify, createOrder, deleteCard, requestHomeCardDetail, reviewDelete } from '../../services/api';
 import { useNavigate, useParams } from 'react-router-dom';
 import "./HomeCardDetail.css";
 import ReviewsForm from './ReviewsForm';
@@ -25,6 +25,46 @@ export default function HomeCardDetail() {
     }
     fetch();
   }, [listing_id, navigate]);
+
+  const handlePayment = async (listing_id) => {
+    try {
+      // 🔹 Step 1: Backend se order banao
+      const { data } = await createOrder(listing_id);
+
+      // 🔹 Step 2: Razorpay checkout options
+      const options = {
+        key: data.key,   
+        amount: data.order.amount,
+        currency: "INR",
+        name: "WonderNest - Room Booking",
+        description: "Room Booking Payment",
+        order_id: data.order.id,  // backend se mila orderId
+        handler: async function (response) {
+          // 🔹 Step 3: Backend ko verify bhejo
+          const verify = await backendVarify(response, listing_id);
+
+          if (verify.data.success) {
+            alert("✅ Payment Successful & Verified");
+            // yaha booking MongoDB me save karna hoga
+          } else {
+            alert("❌ Payment Verification Failed");
+          }
+        },
+        prefill: {
+          name: "User Name",
+          email: "user@example.com",
+          contact: "9999999999",
+        },
+        theme: { color: "#3399cc" },
+      };
+
+      // 🔹 Step 4: Payment popup open karo
+      const rzp1 = new window.Razorpay(options);
+      rzp1.open();
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleDelete = async (listing_id) => {
     const result = await deleteCard(listing_id);
@@ -61,6 +101,13 @@ export default function HomeCardDetail() {
               {listing.country} <br />
               {listing.location} <br />
             </p>
+            { 
+            (listing.status=="Available")?(
+            <button className='btn bookbtn' onClick={()=>handlePayment(listing_id)}>Book</button>
+             ):(
+              <div>Room not available </div>
+             )
+            }
           </div>
         </div>
 

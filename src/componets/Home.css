@@ -37,7 +37,7 @@
     flex-direction: column;
     justify-content: center;
     background-size: cover;
-    background-image: url("new_life_style.jpg");
+    background-image: url("/new_life_style.jpg");
     border-radius: 20px;
     margin-top: 50px;
 }
@@ -56,7 +56,7 @@
 @media(max-width:720px){
     .third-div{
         height: 1000px;
-         background-image: url("life_style_mobile.png");
+         background-image: url("/life_style_mobile.png");
          background-position: center center;
         background-size:cover;
         align-items: start;

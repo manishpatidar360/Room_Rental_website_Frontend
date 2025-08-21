@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+     margin: 0;
+    padding: 0;
   }
 
   html, body {
@@ -9,7 +11,7 @@
     width: 100%;
   }
  body {
-    background-image: url("/pngtree-simple-white-flat-vectors-with-diagonal-cuts-decorative-backdrops-for-your-image_597614.jpg");
+  background-color:#ffffff;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
